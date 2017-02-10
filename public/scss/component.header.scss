@@ -9,9 +9,10 @@
   padding-top: 40px;
   padding-bottom: 30px;
 
-  background-color: #000;
   background-image: url('../images/header-mobile.png');
   background-size: cover;
+
+
 
   @media (min-width: 375px) {
     padding-top: 60px;
@@ -19,6 +20,19 @@
 
   @media (min-width: 410px) {
     padding-top: 70px;
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 50px;
+    min-height: 768px;
+
+    @media (min-height: 768px) {
+      min-height: 100%;
+    }
+  }
+
+  @media (min-width: 850px) {
+    background-image: url('../images/header.png');
   }
 }
 
@@ -38,6 +52,22 @@
   }
 }
 
+.header__info {
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 700px;
+
+    @include transform(translate(-50%, -50%));
+  }
+
+  @media (min-width: 820px) {
+    width: 780px;
+  }
+}
+
 .header__title {
   max-width: 320px;
   margin: 0 auto 15px;
@@ -45,6 +75,16 @@
   color: #fff;
   font-size: 40px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    max-width: none;
+    font-size: 54px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 820px) {
+    font-size: 60px;
+  }
 }
 
 .header__text {
@@ -62,6 +102,12 @@
   @media (min-width: 410px) {
     margin-bottom: 50px;
   }
+
+  @media (min-width: 768px) {
+    width: 670px;
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 
 .header__contact {
@@ -73,6 +119,14 @@
 
 .header__scroll {
   cursor: pointer;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+
+    @include transform(translateX(-50%));
+  }
 }
 
 .header__scroll-text {
@@ -100,6 +154,11 @@
     bottom: 15px;
     left: 15px;
   }
+
+  @media (min-width: 768px) {
+    bottom: 40px;
+    left: 40px;
+  }
 }
 
 .header__corner-yellow {
@@ -109,6 +168,11 @@
   width: 1px;
   height: 80px;
   border-left: 1px solid $primary;
+
+  @media (min-width: 768px) {
+    height: 150px;
+    left: 25px;
+  }
 }
 
 .header__corner-gray {
@@ -119,6 +183,12 @@
   border: 1px solid #979797;
   border-top: none;
   border-right: none;
+
+  @media (min-width: 768px) {
+    width: 150px;
+    height: 150px;
+    bottom: 40px;
+  }
 }
 
 .header__corner-copyright {
@@ -129,4 +199,11 @@
 
   color: #aeabab;
   font-size: 12px;
+
+  @media (min-width: 768px) {
+    left: 45px;
+    font-size: 14px;
+    width: 140px;
+    bottom: 6px;
+  }
 }
