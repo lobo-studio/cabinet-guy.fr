@@ -1,3 +1,5 @@
+@import "settings";
+
 .description {
   height: 440px;
   padding: 70px 0;
@@ -7,7 +9,7 @@
   width: 270px;
   text-align: center;
   margin: 0 auto;
-  color: #383838;
+  color: $text;
   font-size: 23px;
   font-weight: 400;
   line-height: 33px;
