@@ -9,7 +9,7 @@ const gulp = require('gulp'),
 
 gulp.task('browser-sync-init', function () {
     bs.init({
-        proxy: 'http://localhost:3000'
+        proxy: 'http://localhost:4000'
     });
 });
 
