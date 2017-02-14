@@ -3,6 +3,10 @@
 
 .contact {
   padding: 70px 0;
+
+  @media (min-width: 768px) {
+    padding: 125px 0 110px;
+  }
 }
 
 .contact__logo {
@@ -11,6 +15,10 @@
   margin: 0 auto 50px;
   background-image: url('../images/logo-w.png');
   background-size: cover;
+
+  @media (min-width: 768px) {
+    margin-bottom: 80px;
+  }
 }
 
 .contact__title {
@@ -18,11 +26,23 @@
   margin: 0 auto 40px;
   color: $text;
   font-size: 40px;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 50px;
+  }
 }
 
 .contact__form {
   width: 280px;
   margin: 0 auto 20px;
+
+  @media (min-width: 768px) {
+    width: 760px;
+    margin-bottom: 30px;
+  }
 }
 
 .contact__input {
@@ -47,16 +67,39 @@
   @include placeholder {
     color: $text-secondary;
   }
+
+  @media (min-width: 768px) {
+    width: 340px;
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
 }
 
 .contact__send {
   @include button;
+
+  @media (min-width: 768px) {
+    margin-bottom: 80px;
+  }
+}
+
+.contact__info {
+  @media (min-width: 768px) {
+    width: 760px;
+    margin: 0 auto;
+  }
 }
 
 .contact__group {
   margin: 70px auto 0;
   width: 190px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    float: left;
+    margin-top: 0;
+  }
 }
 
 .contact__icon {
@@ -65,7 +108,7 @@
 }
 
 .contact__icon_email {
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 }
 
 .contact__text {
