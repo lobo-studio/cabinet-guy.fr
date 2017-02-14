@@ -533,3 +533,7 @@ html, body {
       font-size: 14px;
       width: 140px;
       bottom: 6px; } }
+
+.location {
+  width: 100%;
+  height: 620px; }

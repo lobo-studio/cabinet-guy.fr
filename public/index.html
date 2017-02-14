@@ -152,6 +152,30 @@
         </div>
     </div>
 
-    <div class="location"></div>
+    <div id="location" class="location"></div>
+
+    <script>
+        function initMap() {
+            var coords = {lat: 14.6060916, lng: -61.0730371};
+
+            var map = new google.maps.Map(document.getElementById('location'), {
+                center: coords,
+                scrollwheel: false,
+                zoom: 15
+            });
+
+            var marker = new google.maps.Marker({
+                position: coords,
+                map: map,
+                title: '122 rue Lamartine'
+            });
+
+            window.addEventListener('resize', function() {
+                map.setCenter(coords);
+            });
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXM_0l7FvLR5e6tMLb0OBb3RMIFl96asA&callback=initMap" async defer></script>
 </body>
 </html>
