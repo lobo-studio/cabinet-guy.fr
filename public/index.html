@@ -107,13 +107,13 @@
         <div class="contact__title">Contactez-moi</div>
 
         <div class="contact__form">
-            <input type="text" class="contact__input" placeholder="Nom">
-            <input type="text" class="contact__input" placeholder="Email">
-            <input type="text" class="contact__input" placeholder="Message">
+            <input type="text" class="contact__input" placeholder="Nom" id="contactName">
+            <input type="text" class="contact__input" placeholder="Email" id="contactEmail">
+            <input type="text" class="contact__input" placeholder="Message" id="contactMessage">
             <div class="clearfix"></div>
         </div>
 
-        <div class="contact__send">Envoyer</div>
+        <div class="contact__send" id="contactSend">Envoyer</div>
 
         <div class="contact__info">
             <div class="contact__group">
@@ -176,6 +176,45 @@
                 map.setCenter(coords);
             });
         }
+
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+        document.getElementById('contactSend').addEventListener('click', function () {
+            var xhr = new XMLHttpRequest();
+
+            var name = document.getElementById('contactName').value;
+            var email = document.getElementById('contactEmail').value;
+            var message = document.getElementById('contactMessage').value;
+
+            if (name === '') {
+                alert('Please check the "name" field');
+                return;
+            }
+
+            if (!validateEmail(email)) {
+                alert('Please check the "email" field');
+                return;
+            }
+
+            if (message === '') {
+                alert('Please check the "message" field');
+                return;
+            }
+
+            var url = 'https://hooks.zapier.com/hooks/catch/1996976/m6asza?email=' + email + '&name=' + name + '&message=' + message;
+
+            xhr.open('GET', url, false);
+            xhr.send();
+
+            if (xhr.status === 200) {
+                alert('Thanks for your request!');
+            } else {
+                alert('Error while sending form. Please try again later.');
+            }
+        });
     </script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXM_0l7FvLR5e6tMLb0OBb3RMIFl96asA&callback=initMap" async defer></script>
