@@ -346,7 +346,8 @@ html, body {
   padding-bottom: 30px;
   background-image: url("../images/header-mobile.png");
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  background-attachment: fixed; }
   @media (min-width: 375px) {
     .header {
       padding-top: 60px; } }
