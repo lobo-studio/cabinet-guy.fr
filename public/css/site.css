@@ -353,8 +353,7 @@ html, body {
   padding-bottom: 30px;
   background-image: url("../images/header-mobile.png");
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed; }
+  background-position: center; }
   @media (min-width: 375px) {
     .header {
       padding-top: 60px; } }
@@ -368,7 +367,8 @@ html, body {
       min-height: 600px; } }
   @media (min-width: 850px) {
     .header {
-      background-image: url("../images/header.png"); } }
+      background-image: url("../images/header.png");
+      background-attachment: fixed; } }
 
 .header__logo {
   width: 90px;
